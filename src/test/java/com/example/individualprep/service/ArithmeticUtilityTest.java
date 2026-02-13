@@ -15,11 +15,14 @@ class ArithmeticUtilityTest {
     @Test
     void testSubtract(){
         // TODO: implement
+        assertEquals(5.0, arithmeticUtility.subtract(10.0, 5.0), precision);
+
+        assertEquals(-2.0, arithmeticUtility.subtract(3.0, 5.0), precision);
     }
 
     @Test
     void testMultiply(){
-        // TODO: implement
+        assertEquals(10.0, arithmeticUtility.multiply(2.5, 4.0), precision);
     }
 
     @Test
