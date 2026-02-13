@@ -1,7 +1,9 @@
 package com.example.individualprep.service;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class VectorUtilityTest {
 
@@ -25,12 +27,17 @@ class VectorUtilityTest {
 
     @Test
     void testSubtractSucceed() {
-        // TODO: implement subtract test succeed
+        double[] v1 = {5.0, 6.0};
+        double[] v2 = {2.0, 4.0};
+        double[] expected = {3.0, 2.0};
+        assertArrayEquals(expected, vectorUtility.subtract(v1, v2), precision);
     }
 
     @Test
     void testSubtractDimensionFailed() {
-        // TODO: implement subtract test failed
+        double[] v1 = {1.0, 2.0, 3.0};
+        double[] v2 = {1.0, 2.0};
+        assertThrows(IllegalArgumentException.class, () -> vectorUtility.subtract(v1, v2));
     }
 
     @Test
@@ -78,11 +85,15 @@ class VectorUtilityTest {
 
     @Test
     void testNormSucceed() {
-        // TODO: implement norm test succeed
+        double[] v1 = {3.0, 4.0};
+        double expected = 5.0;
+        assertEquals(expected, vectorUtility.norm(v1), precision);
     }
 
     @Test
     void testNormNegativeValues() {
-        // TODO: implement norm with negative values
+        double[] v1 = {-3.0, -4.0};
+        double expected = 5.0;
+        assertEquals(expected, vectorUtility.norm(v1), precision);
     }
 }

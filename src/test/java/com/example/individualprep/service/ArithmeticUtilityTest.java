@@ -1,53 +1,59 @@
 package com.example.individualprep.service;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ArithmeticUtilityTest {
     private final ArithmeticUtility arithmeticUtility = new ArithmeticUtility();
     private final double precision = 0.0001;
 
     @Test
-    void testAdd(){
-        // TODO: implement
+    void testAdd() {
+        assertEquals(5.5, arithmeticUtility.add(2.5, 3.0), precision);
+        assertEquals(-1.0, arithmeticUtility.add(2.0, -3.0), precision);
     }
 
     @Test
-    void testSubtract(){
-        // TODO: implement
+    void testSubtract() {
         assertEquals(5.0, arithmeticUtility.subtract(10.0, 5.0), precision);
-
         assertEquals(-2.0, arithmeticUtility.subtract(3.0, 5.0), precision);
     }
 
     @Test
-    void testMultiply(){
+    void testMultiply() {
         assertEquals(10.0, arithmeticUtility.multiply(2.5, 4.0), precision);
     }
 
     @Test
-    void testDivideNormal(){
-        // TODO: implement division not by zero
+    void testDivideNormal() {
+        assertEquals(2.5, arithmeticUtility.divide(5.0, 2.0), precision);
+        assertEquals(-2.0, arithmeticUtility.divide(10.0, -5.0), precision);
     }
 
     @Test
-    void testDivideByZero(){
-        // TODO: implement division by zero
+    void testDivideByZero() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> arithmeticUtility.divide(5.0, 0.0)
+        );
+
+        assertEquals("Pembagi tidak boleh nol!", exception.getMessage());
     }
 
     @Test
-    void testExponentPositive(){
+    void testExponentPositive() {
         assertEquals(8.0, arithmeticUtility.exponent(2.0, 3), precision);
     }
 
     @Test
-    void testExponentZero(){
+    void testExponentZero() {
         assertEquals(1.0, arithmeticUtility.exponent(2.0, 0), precision);
     }
 
     @Test
-    void testExponentNegative(){
+    void testExponentNegative() {
         assertEquals(0.5, arithmeticUtility.exponent(2.0, -1), precision);
     }
-
 }
