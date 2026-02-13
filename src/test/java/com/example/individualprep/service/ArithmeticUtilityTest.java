@@ -36,17 +36,17 @@ class ArithmeticUtilityTest {
     }
 
     @Test
-    void testExponentPositive(){
+    void testExponentPositive() {
         assertEquals(8.0, arithmeticUtility.exponent(2.0, 3), precision);
     }
 
     @Test
-    void testExponentZero(){
+    void testExponentZero() {
         assertEquals(1.0, arithmeticUtility.exponent(2.0, 0), precision);
     }
 
     @Test
-    void testExponentNegative(){
+    void testExponentNegative() {
         assertEquals(0.5, arithmeticUtility.exponent(2.0, -1), precision);
     }
 
