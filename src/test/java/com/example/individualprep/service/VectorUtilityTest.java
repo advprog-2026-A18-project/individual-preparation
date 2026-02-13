@@ -3,7 +3,7 @@ package com.example.individualprep.service;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class VectorUtilityTest {
+class VectorUtilityTest {
 
     private final VectorUtility vectorUtility = new VectorUtility();
     private final double precision = 0.0001;
@@ -62,12 +62,4 @@ public class VectorUtilityTest {
     void testNormNegativeValues() {
         // TODO: implement norm with negative values
     }
-}
-
-
-
-
-
-
-
 }
