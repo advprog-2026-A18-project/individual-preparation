@@ -20,7 +20,6 @@ sonarqube {
 	}
 }
 
-
 test {
 	useJUnitPlatform()
 	finalizedBy jacocoTestReport
