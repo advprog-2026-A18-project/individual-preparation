@@ -7,7 +7,7 @@ public class VectorUtility {
     
     public double[] add(double[] v1, double[] v2) {
         if (v1.length != v2.length){
-            throw new IllegalArgumentException("Vektor harus memiliki dimensi yang sama.");
+            throw new IllegalArgumentException("vektor harus memiliki dimensi yang sama.");
         }
         double[] result = new double[v1.length];
         for(int i = 0; i < v1.length; i++){
