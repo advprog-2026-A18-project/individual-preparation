@@ -22,7 +22,7 @@ class ArithmeticUtilityTest {
 
     @Test
     void testMultiply(){
-        // TODO: implement
+        assertEquals(10.0, arithmeticUtility.multiply(2.5, 4.0), precision);
     }
 
     @Test
