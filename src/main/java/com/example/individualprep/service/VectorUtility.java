@@ -22,7 +22,6 @@ public class VectorUtility {
     }
 
     public double[] multiply(double[] v1, int x) {
-        // TODO: Implement me properly!
         for (int index=0; index<v1.length; index++){
             v1[index] = v1[index] * x;
         }
