@@ -35,7 +35,7 @@ tasks.named('test') {
 sonar {
 	properties {
 		property "sonar.projectKey", "advprog-2026-a18-project"
-		property "sonar.organization", "advprog-2026-a18-project"
+		property "sonar.organization", "advprog-2026-A18-project_individual-preparation"
 		property "sonar.host.url", "https://sonarcloud.io/"
 	}
 }
