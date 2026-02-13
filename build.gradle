@@ -53,6 +53,7 @@ test {
 }
 
 checkstyle {
-	toolVersion = '10.13.0'
+	toolVersion = '10.12.4'
+	configFile = file('config/checkstyle/checkstyle.xml')
 	ignoreFailures = false
 }
