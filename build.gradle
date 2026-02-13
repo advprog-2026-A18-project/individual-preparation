@@ -53,6 +53,6 @@ test {
 }
 
 checkstyle {
-	toolVersion = '10.12.5'
+	toolVersion = '10.13.0'
 	ignoreFailures = false
 }
