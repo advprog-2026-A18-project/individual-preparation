@@ -9,7 +9,7 @@ public class VectorUtilityTest {
     private final double precision = 0.0001;
 
     @Test
-    void testAddSucceed(){
+    void testAddSucceed() {
         double[] v1 = {1.0, 2.0};
         double[] v2 = {3.0, 4.0};
         double[] expected = {4.0, 6.0};
@@ -24,8 +24,8 @@ public class VectorUtilityTest {
     }
 
     @Test
-    void testSubtractSucceed(){
-       // TODO: implement subtract test succeed
+    void testSubtractSucceed() {
+        // TODO: implement subtract test succeed
     }
 
     @Test
@@ -34,7 +34,7 @@ public class VectorUtilityTest {
     }
 
     @Test
-    void testMultiplySucceed(){
+    void testMultiplySucceed() {
         // TODO: implement multiply test succeed
     }
 
@@ -44,7 +44,7 @@ public class VectorUtilityTest {
     }
 
     @Test
-    void testDotProductSucceed(){
+    void testDotProductSucceed() {
         // TODO: implement dot product test succeed
     }
 
@@ -54,7 +54,7 @@ public class VectorUtilityTest {
     }
 
     @Test
-    void testNormSucceed(){
+    void testNormSucceed() {
         // TODO: implement norm test succeed
     }
 
@@ -62,6 +62,7 @@ public class VectorUtilityTest {
     void testNormNegativeValues() {
         // TODO: implement norm with negative values
     }
+}
 
 
 
