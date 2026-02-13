@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 public class VectorUtility {
     
     public double[] add(double[] v1, double[] v2) {
-        if (v1.length != v2.length){
+        if (v1.length != v2.length) {
             throw new IllegalArgumentException("vektor harus memiliki dimensi yang sama.");
         }
         double[] result = new double[v1.length];
-        for(int i = 0; i < v1.length; i++){
+        for (int i = 0; i < v1.length; i++) {
             result[i] = v1[i] + v2[i];
         }
         return result;
@@ -22,7 +22,7 @@ public class VectorUtility {
     }
 
     public double[] multiply(double[] v1, int x) {
-        for (int index=0; index<v1.length; index++){
+        for (int index = 0; index < v1.length; index++) {
             v1[index] = v1[index] * x;
         }
         return v1;
@@ -30,13 +30,13 @@ public class VectorUtility {
     
     public double dotProduct(double[] v1, double[] v2) {
         // TODO: Implement me properly!
-        if(v1.length != v2.length){
+        if (v1.length != v2.length) {
             throw new IllegalArgumentException("Panjang vektor harus sama!");
         }
 
         double result = 0.0;
-        for(int i=0; i < v1.length; i++){
-            result+= v1[i] * v2[i];
+        for (int i = 0; i < v1.length; i++) {
+            result += v1[i] * v2[i];
         }
 
         return result;

@@ -36,7 +36,7 @@ sonar {
 	properties {
 		property "sonar.projectKey", "advprog-2026-a18-project"
 		property "sonar.organization", "advprog-2026-a18-project"
-		property "sonar.host.url", "https://sonarcloud.io"
+		property "sonar.host.url", "https://sonarcloud.io/"
 	}
 }
 
@@ -53,7 +53,7 @@ test {
 }
 
 checkstyle {
-	toolVersion = '10.12.4'
+	toolVersion = "10.12.4"
 	configFile = file('config/checkstyle/checkstyle.xml')
 	ignoreFailures = false
 }
