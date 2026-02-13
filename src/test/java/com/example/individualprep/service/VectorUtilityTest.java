@@ -45,12 +45,29 @@ class VectorUtilityTest {
 
     @Test
     void testDotProductSucceed() {
-        // TODO: implement dot product test succeed
+        // TODO: implement dot product test Succeed
+        double[] v1 = {1.0, 2.0, 3.0};
+        double[] v2 = {4.0, 5.0, 6.0};
+
+        double expectedResult = 32.0;
+
+        double result = vectorUtility.dotProduct(v1, v2);
+
+        assertEquals(expectedResult, result);
+
     }
 
     @Test
     void testDotProductDimensionFailed() {
         // TODO: implement dot product test failed
+        double[] v1 = {1.0, 2.0};
+        double[] v2 = {1.0, 2.0, 3.0};
+
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            vectorUtility.dotProduct(v1, v2);
+        });
+
+        assertEquals("Panjang vektor harus sama!", exception.getMessage());
     }
 
     @Test
