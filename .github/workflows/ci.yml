@@ -2,7 +2,7 @@ name: CI/CD Quality Check
 
 on:
   push:
-    branches: [ "main", "feat/vector-add", "cicd/evan"]
+    branches: [ "main", "cicd/evan"]
   pull_request:
     branches: [ "main" ]
 
