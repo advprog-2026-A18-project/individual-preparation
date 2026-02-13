@@ -8,12 +8,12 @@ class ArithmeticUtilityTest {
     private final double precision = 0.0001;
 
     @Test
-    void testAdd(){
+    void testAdd() {
         // TODO: implement
     }
 
     @Test
-    void testSubtract(){
+    void testSubtract() {
         // TODO: implement
         assertEquals(5.0, arithmeticUtility.subtract(10.0, 5.0), precision);
 
@@ -21,17 +21,17 @@ class ArithmeticUtilityTest {
     }
 
     @Test
-    void testMultiply(){
+    void testMultiply() {
         assertEquals(10.0, arithmeticUtility.multiply(2.5, 4.0), precision);
     }
 
     @Test
-    void testDivideNormal(){
+    void testDivideNormal() {
         // TODO: implement division not by zero
     }
 
     @Test
-    void testDivideByZero(){
+    void testDivideByZero() {
         // TODO: implement division by zero
     }
 
