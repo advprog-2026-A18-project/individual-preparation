@@ -26,13 +26,16 @@ class ArithmeticUtilityTest {
     }
 
     @Test
-    void testDivideNormal(){
-        // TODO: implement division not by zero
+    void testDivide() {
+        assertEquals(5.0, arithmeticUtility.divide(10, 2));
+        assertEquals(2.5, arithmeticUtility.divide(5, 2));
     }
 
     @Test
-    void testDivideByZero(){
-        // TODO: implement division by zero
+    void testDivideByZero() {
+        assertThrows(ArithmeticException.class, () -> {
+            arithmeticUtility.divide(10, 0);
+        });
     }
 
     @Test

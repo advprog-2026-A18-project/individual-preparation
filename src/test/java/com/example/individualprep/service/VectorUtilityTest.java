@@ -24,13 +24,28 @@ class VectorUtilityTest {
     }
 
     @Test
-    void testSubtractSucceed() {
-        // TODO: implement subtract test succeed
+    void testSubtract() {
+        // Skenario Normal
+        double[] v1 = {10.0, 20.0, 30.0};
+        double[] v2 = {1.0, 2.0, 3.0};
+
+        // Ekspektasi: 10-1=9, 20-2=18, 30-3=27
+        double[] expected = {9.0, 18.0, 27.0};
+        double[] result = vectorUtility.subtract(v1, v2);
+
+        // Pakai assertArrayEquals untuk membandingkan isi array
+        assertArrayEquals(expected, result);
     }
 
     @Test
-    void testSubtractDimensionFailed() {
-        // TODO: implement subtract test failed
+    void testSubtractDimensionMismatch() {
+        // Skenario Error: Panjang array beda
+        double[] v1 = {1.0, 2.0};
+        double[] v2 = {1.0}; // Cuma 1 elemen
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            vectorUtility.subtract(v1, v2);
+        });
     }
 
     @Test
