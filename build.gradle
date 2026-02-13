@@ -12,7 +12,7 @@ checkstyle {
 	ignoreFailures = false
 }
 
-sonar {
+sonarqube {
 	properties {
 		property "sonar.projectKey", "advprog-2026-A18-project_individual-preparation"
 		property "sonar.organization", "advprog-2026-a18-project"
