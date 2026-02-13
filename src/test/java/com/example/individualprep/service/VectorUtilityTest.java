@@ -35,12 +35,18 @@ class VectorUtilityTest {
 
     @Test
     void testMultiplySucceed() {
-        // TODO: implement multiply test succeed
+        double[] v1 = {1.0, 2.0, 3.0};
+        int x = 2;
+        double[] expected = {2.0, 4.0, 6.0};
+        assertArrayEquals(expected, vectorUtility.multiply(v1, x), precision);
     }
 
     @Test
     void testMultiplyByZeroFailed() {
-        // TODO: implement multiply test failed
+        double[] v1 = {5.5, 10.1};
+        int x = 0;
+        double[] expected = {0.0, 0.0};
+        assertArrayEquals(expected, vectorUtility.multiply(v1, x), precision);
     }
 
     @Test
