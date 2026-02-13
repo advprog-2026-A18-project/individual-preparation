@@ -31,13 +31,6 @@
 
     <module name="SuppressWarningsFilter"/>
 
-    <!-- https://checkstyle.org/filters/suppressionfilter.html -->
-    <module name="SuppressionFilter">
-        <property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
-                  default="checkstyle-suppressions.xml" />
-        <property name="optional" value="true"/>
-    </module>
-
     <!-- https://checkstyle.org/filters/suppresswithnearbytextfilter.html -->
     <module name="SuppressWithNearbyTextFilter">
         <property name="nearbyTextPattern"
